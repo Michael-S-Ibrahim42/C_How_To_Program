@@ -1,0 +1,9 @@
+make.exe -f A:\00_SHIELD\02_Codes\06_Cpp_for_Emb\Makefile --dry-run --keep-going --print-directory
+make: Entering directory '/a/00_SHIELD/02_Codes/03_C/C_How_To_Program/01_Chapter_4'
+echo "Building project at path "
+g++ -fdiagnostics-color=always -Wall -g /*.c* -o /out.exe -Wl,-Map,/out.map,--print-memory-usage
+ 
+objdump -S --disassemble /out.exe > /out.asm
+echo "############# Done #############"
+make: Leaving directory '/a/00_SHIELD/02_Codes/03_C/C_How_To_Program/01_Chapter_4'
+ 
