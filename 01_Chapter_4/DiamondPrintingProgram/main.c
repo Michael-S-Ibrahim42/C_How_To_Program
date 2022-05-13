@@ -11,12 +11,14 @@
 #define DOWN        1
 #define PART        UP
 
+int x = 5;
 /* main Fn */
 int main(int args, char** argv)
 {
   int Iterator1, Iterator2;
   for(Iterator1 = 0; Iterator1 < 9; Iterator1++)
   {
+    x++;
     /* Spaces */
     for(Iterator2 = 0; ((Iterator2<(9/2-Iterator1)) || (Iterator2<(Iterator1-4))); Iterator2++)
     {

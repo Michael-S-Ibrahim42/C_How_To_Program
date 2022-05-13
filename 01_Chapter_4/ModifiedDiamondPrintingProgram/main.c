@@ -14,17 +14,19 @@
 /* main Fn */
 int main(int args, char** argv)
 {
-  int Iterator1, Iterator2;
-  for(Iterator1 = 0; Iterator1 < 9; Iterator1++)
+  int Iterator1, Iterator2, Rows;
+  printf("Enter number of rows: ");
+  scanf("%d", &Rows);
+  for(Iterator1 = 0; Iterator1 < Rows; Iterator1++)
   {
     /* Spaces */
-    for(Iterator2 = 0; ((Iterator2<(9/2-Iterator1)) || (Iterator2<(Iterator1-4))); Iterator2++)
+    for(Iterator2 = 0; ((Iterator2<((Rows/2)-Iterator1)) || (Iterator2<(Iterator1-(Rows/2)))); Iterator2++)
     {
       printf(" ");
     }/* for */
   
     /* Stars */
-    if(Iterator1 < 5)
+    if(Iterator1 < (Rows/2)+1)
     {
       for(Iterator2 = 0; Iterator2 < (Iterator1*2+1); Iterator2++)
       {
@@ -33,14 +35,14 @@ int main(int args, char** argv)
     }/* if */
     else
     {
-      for(Iterator2 = (7-((Iterator1-5)*2)); Iterator2 > 0; Iterator2--)
+      for(Iterator2 = ((Rows-2)-((Iterator1-((Rows/2)+1))*2)); Iterator2 > 0; Iterator2--)
       {
         printf("*");
       }/* for */
     }/* else */
  
     /* Spaces */
-    for(Iterator2 = 0; ((Iterator2<(9/2-Iterator1)) || (Iterator2<(Iterator1-4))); Iterator2++)
+    for(Iterator2 = 0; ((Iterator2<((Rows/2)-Iterator1)) || (Iterator2<(Iterator1-(Rows/2)))); Iterator2++)
     {
       printf(" ");
     }/* for */
